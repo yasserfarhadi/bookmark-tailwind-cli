@@ -12,9 +12,33 @@
     <link href="./styles.css" rel="stylesheet" />
     <title>Bookmark</title>
   </head>
-  <body>
-    <h1 class="bg-red-500">hello</h1>
-    <h1 class="text-blue-500">hello</h1>
-    <h1 class="w-20 h-48 bg-cyan-400">hello</h1>
+  <body class="overflow-x-hidden">
+    <div class="nav container relative mx-auto p-6">
+      <!-- Flex Container For Nav Items -->
+      <div class="flex items-center justify-between space-x-20 my-6">
+        <!-- Logo  -->
+        <div class="z-30">
+          <img id="logo" src="images/logo-bookmark.svg" alt="logo" />
+        </div>
+
+        <!-- Menu Items -->
+        <div
+          class="hidden items-center space-x-10 uppercase text-grayishBlue md:flex"
+        >
+          <a href="#features" class="tracking-widest hover:text-softRed"
+            >Features</a
+          >
+          <a href="#download" class="tracking-widest hover:text-softRed"
+            >Download</a
+          >
+          <a href="#faq" class="tracking-widest hover:text-softRed">FAQ</a>
+          <a
+            href="#"
+            class="px-8 py-2 text-white bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-white"
+            >Login</a
+          >
+        </div>
+      </div>
+    </div>
   </body>
 </html>
