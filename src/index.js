@@ -1,7 +1,12 @@
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+const logo = document.getElementById('logo');
 
 tabs.forEach((tab) => tab.addEventListener('click', tabClickHandler));
+
+btn.addEventListener('click', navToggleHandler);
 
 function tabClickHandler(event) {
   const dataTarget = event.target.getAttribute('data-target');
@@ -20,4 +25,15 @@ function tabClickHandler(event) {
       panel.classList.add('hidden');
     }
   });
+}
+
+function navToggleHandler(event) {
+  btn.classList.toggle('open');
+  menu.classList.toggle('hidden');
+  menu.classList.toggle('flex');
+  if (menu.classList.contains('flex')) {
+    logo.setAttribute('src', './images/logo-bookmark-footer.svg');
+  } else {
+    logo.setAttribute('src', './images/logo-bookmark.svg');
+  }
 }
